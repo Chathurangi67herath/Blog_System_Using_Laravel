@@ -1,0 +1,496 @@
+$color1:black;
+$color2: #2f3640;
+$color3: #34495e;
+$color4: #3498db;
+$color5:white;
+$color6:rgba(20, 33, 61, 1);
+$color7:#cde7f9;
+$color8:rgb(222, 222, 222);
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Montserrat;
+}
+
+//========================================================================
+//           Navigation Bar
+//========================================================================
+
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: $color3;
+    font-family: Montserrat;
+}
+label #logo{
+    font-size: 25px;
+    font-weight: bold;
+    color: $color5;
+    padding: 0 100px;
+    line-height: 80px;
+}
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+nav a{
+color: $color5;
+font-size: 18px;
+border: 1px solid transparent;
+padding: 7px 10px;
+border-radius: 3px;
+}
+a.active,a:hover{
+    border: 1px solid $color5;
+    transition: .1s;
+}
+#logo:hover{
+  cursor: pointer;
+  border: none;
+}
+nav #icon{
+    color:$color5;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+//Responsive for the navigation bar----------------------------------------------------------------------------
+
+@media (max-width:1048px){
+  label #logo{
+    font-size: 32px;
+    padding-left: 60px;
+}
+nav ul{
+    margin-right: 20px;
+}
+nav a{
+    font-size: 17px;
+}
+}
+//----------------------------------------------------------------
+
+@media (max-width:909px){
+nav #icon{
+    display: block;
+   margin-right: 35px;
+}
+nav{
+  width: 100%;
+}
+nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: $color2;
+    top:80px;
+    left:-100%;
+    text-align: center;
+    transition: all .5s;
+}
+nav li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+}
+nav a{
+    font-size: 20px;
+}
+a.active,a:hover{
+    border: none;
+    color: $color4;
+}
+nav ul.show{
+    left:0;
+}
+}
+//------------------------------------------------------------------------
+@media (max-width:376px){
+  nav #icon{
+      line-height: 80px;
+  }
+}
+//------------------------------------------------------------------------
+@media (max-width:321px){
+  nav #icon{
+   margin-right: 30px;
+}}
+
+//==================================================
+//==================================================================================
+//    Web Content
+//==================================================================================
+.web-content{
+    width: 100%;
+    display: flex;
+    margin-top: 0px;
+
+
+.home{
+    width: 100%;
+    justify-content: center;
+    .home_text{
+        text-align: center;
+        font-size: 50px;
+        padding-top: 50px;
+    }
+    .home_image{
+        width:35%;
+        display: block;
+        margin: 10px auto;
+    }
+
+}
+
+
+    //----------------------------------------------------------
+
+ .left{
+    width: 35%;
+    height: 100%;
+    background-color:$color5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   .left-content{
+    width: 90%;
+    background-color: $color2;
+    border-radius: 30px;
+    padding: 30px;
+    margin: 50px;
+    margin-bottom: 20%;
+
+      h1{
+    text-align: center;
+    margin-bottom: 25px;
+    color: $color5;
+      }
+
+    label{
+    color: $color5;
+       }
+
+    input {
+    border: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-family: Montserrat;
+     }
+
+    .selectoption{
+    border: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-family: Montserrat;
+       }
+
+   .imageinput{
+    background-color: $color5;
+    border: none;
+    width: 97%;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    }
+
+    #submit{
+    background-color:$color1;
+    color:$color5;
+    margin-top: 40px;
+    height: 55px;
+    border-radius: 50px;
+    }
+
+    #submit:hover{
+    cursor: pointer;
+    background-color:$color4;
+    color:$color1;
+     }
+
+    #reset{
+    border-radius: 50px;
+     }
+
+     #reset:hover{
+    cursor: pointer;
+    background-color:$color1;
+    color:$color5;
+      }
+
+   }
+ }
+  //-----------------------------
+  .right{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+     .right-content{
+    width: 100%;
+    height: 100vh;
+    background-color: $color8;
+    padding: 20px 10px;
+
+    h1{
+        margin: 25px;
+        color: $color1;
+    }
+
+    .search{
+        display: flex;
+        justify-content: center;
+     #sinput{
+        width: 70%;
+        border: none;
+        border-radius: 10px;
+        padding-left: 50px;
+        font-size: 15px;
+        padding: 10px;
+        font-family: Montserrat;
+     }
+     #sbtn{
+        margin-left: 10px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 15px;
+        width: 15%;
+        background-color: $color1;
+        color: $color5;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family: Montserrat;
+     }
+     #sbtn:hover{
+        background-color: $color4;
+     }
+    }
+
+   .categoties{
+    display: flex;
+    justify-content:left;
+
+    .item{
+        background-color: $color5;
+        width:20%;
+        height: 100%;
+        padding: 20px;
+        font-family: Montserrat;
+        margin: 10px;
+
+
+        a{
+            border: none;
+        }
+        img{
+            width: 20px;
+            margin-right: 30px;
+        }
+      }
+
+    }
+
+
+    table{
+        width: 100%;
+        margin-top: 30px;
+        tr{
+            text-align: center;
+            td,th{
+            padding: 10px;}
+
+            a{
+                border: none;
+            }
+
+            button{
+                margin: 10px;
+                padding: 10px 20px;
+                border-radius: 30px;
+                font-size: 15px;
+                font-family: Montserrat;
+
+            }
+            button:hover{
+                background-color: $color1;
+                color: $color5;
+            }
+
+        }
+    }
+   }
+ }
+
+}
+
+//=======================================================================
+//Responsive fo web content=============================================
+
+@media (max-width:909px){
+    .web-content{
+display: block;
+.left{
+    width: 100%;
+background-color: $color6;
+
+    .left-content{
+        width: 50%;
+    margin-top: 50%;
+}
+}
+
+.right{
+    width: 100%;
+    margin-top: 20%;
+    .right-content{
+        padding: 5px;
+
+
+        .search{
+
+    #sinput{
+        padding-left: 20px;
+        font-size: 12px;
+    }
+    #sbtn{
+        font-size: 12px;
+
+    }
+        }
+
+        table{
+            tr{
+                button{
+                    padding: 7px 10px;
+                    font-size: 10px;
+                }
+            }
+        }
+}}
+    }
+}
+
+//---------------------------------------------------------
+
+@media (max-width:600px){
+
+    .left-content{
+        width: 80%;
+    margin-top: 500%;}
+}
+
+
+//================================================================================
+
+
+#different{
+    width: 100%;
+
+    #different-content{
+        width: 25%;
+        margin-top: 100px;
+
+        .loginnav{
+            display: flex;
+            justify-content: center;
+            color: white;
+
+            a:hover{
+                color: white;
+                border: none;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+//all post======================================================================
+
+.web-content-post{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .post-background{
+       width:50%;
+       background-color: $color8;
+        display: flexbox;
+        height: 100vh;
+
+
+.post{
+     margin: 7%;
+    padding: 20px;
+    width: 80%;
+    background-color:$color5;
+    display: flexbox;
+    ma
+
+    .description{
+        text-align: justify;
+    }
+.action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pbutton{
+        width: 50%;
+        background-color:$color4;
+        display: flex;
+        justify-content: center;
+       padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+
+        a{
+            border: none;
+        }
+        a:hover{
+            color: $color5;
+        }
+    }
+
+    .pbutton:hover{
+        background-color: $color1;
+        color: $color5;
+    }
+
+}
+
+
+
+
+}}
+}
